@@ -1,6 +1,8 @@
 # fantasylifetool2
 Fantasy Life Request Tracking Tool V2.0
 
+![image](https://user-images.githubusercontent.com/5571989/72780677-6c63f700-3bed-11ea-9c7d-f5df72c85931.png)
+
 Using the Program:
 
 -------------Maps and Buttons-------------
@@ -84,5 +86,3 @@ Using the Program:
 Known Bugs:
 
 - None at the moment!
-
-![image](https://user-images.githubusercontent.com/5571989/72780025-a46a3a80-3beb-11ea-9f03-f9a4abb89123.png)
