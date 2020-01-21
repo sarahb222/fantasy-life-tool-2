@@ -7,15 +7,19 @@ Using the Program:
 
 - The left side is all the map buttons.
 - The right side has option buttons at the top and a list of requests below them.
+
 ![image](https://user-images.githubusercontent.com/5571989/72780127-03c84a80-3bec-11ea-86cd-72c20a33d240.png)
 - You can hover over the map buttons to see the name of the location.
+
 ![image](https://user-images.githubusercontent.com/5571989/72780415-d203b380-3bec-11ea-9bfc-82a69d5142f3.png)
 - The program's title changes depending on which buttons you have clicked, telling you the location and which option button was pressed.
+
 ![image](https://user-images.githubusercontent.com/5571989/72780063-cc599e00-3beb-11ea-9558-6bad1abb9178.png)
 - Selecting a location on the left will change the request list to show only
 	quests associated with that particular location. If you choose "ALL" then
   	all quest locations will show (this is the default option when you open
 	the program). If you choose "LIVES" then only Life Challenges will show.
+	
 ![image](https://user-images.githubusercontent.com/5571989/72780084-dd0a1400-3beb-11ea-98a1-5a85033f1b63.png)
 - Selecting from the options at the top right will change the request list to show
 	only request that are unobtained, obtained, completed, or turned in depending
@@ -48,6 +52,7 @@ Using the Program:
 -------------Request List-------------
 
 ![image](https://user-images.githubusercontent.com/5571989/72780261-69b4d200-3bec-11ea-8b83-0e5b51fb8493.png)
+
 ![image](https://user-images.githubusercontent.com/5571989/72780230-4be76d00-3bec-11ea-9622-eec2d4c25a75.png)
 - Under the "Complete" column is a drop down menu.
   - Choose Unobtained if you do not have the request (default option)
@@ -65,10 +70,12 @@ Using the Program:
 	enemy you need to kill etc.
 = The "Desc" column shows what is required for the request.
 - The "Turn In" column shows where you obtain or turn in the request.
+
 ![image](https://user-images.githubusercontent.com/5571989/72780386-bbf5f300-3bec-11ea-8295-dafffa937bd8.png)
 - The "Location" column shows where you go to work on a request. If you click on an option,
   the program will automatically switch to that location. It will also switch to "Obtained Requests."
   Use this if you want to quickly go to a location where you can work on that particular request.
+  
 ![image](https://user-images.githubusercontent.com/5571989/72780515-0f684100-3bed-11ea-9015-a6c22a3576ac.png)
 - Below the requests are Forward and Back buttons to access more requests. Only 29 requests can be seen per page.
 
