@@ -2,6 +2,11 @@
 
 Download Link: https://www.dropbox.com/s/iruqemnadae5axl/FantasyLifeQuestTracker.zip?dl=0
 
+- Extract the file to whichever folder you want.
+- I recommend making a shortcut to FantasyLifeQuestTracker.exe so that you can place it in a more convenient location such as your Desktop.
+- If you would like to start the file with all "Novice" level requests turned in and all "Fledgling" level requests obtained, change the file called currentprogress_all_lives_start.txt to currentprogress.txt. You can also make a copy of this file in case you want to restart later on.
+- If you would like to start a new character but keep your old file in case you want to go back to your previous character, just change currentprogress.txt to some other name such as currentprogress_CharacterName.txt. You can also just delete currentprogress.txt if you don't care about the previous data.
+- The file saves every time you make any change, so you never have to worry about forgetting to save before closing the program.
 
 Fantasy Life Request Tracking Tool V2.0
 
