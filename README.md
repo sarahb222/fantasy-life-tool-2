@@ -79,7 +79,7 @@ Using the Program:
 - The "Name" column shows the name of the request. If you click on it, it will take you to
 	a wiki page. Usually the wiki page will be for whatever object you need or whatever
 	enemy you need to kill etc.
-= The "Desc" column shows what is required for the request.
+- The "Desc" column shows what is required for the request.
 - The "Turn In" column shows where you obtain or turn in the request.
 
 ![image](https://user-images.githubusercontent.com/5571989/72780386-bbf5f300-3bec-11ea-8295-dafffa937bd8.png)
