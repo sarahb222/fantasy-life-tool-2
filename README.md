@@ -1,6 +1,6 @@
 # Fantasy Life Quest Tracker 2.0
 
-Download Link: https://www.dropbox.com/s/iruqemnadae5axl/FantasyLifeQuestTracker.zip?dl=0
+Download Link: https://sarahb222.itch.io/unofficial-fantasy-life-quest-tracker
 
 - Extract the file to whichever folder you want.
 - I recommend making a shortcut to FantasyLifeQuestTracker.exe so that you can place it in a more convenient location such as your Desktop.
