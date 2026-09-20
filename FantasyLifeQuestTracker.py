@@ -20,6 +20,16 @@ data = []
 global placedata #all 48 [0,47] place names here placenames.txt
 global topButton #which of the 5 btns [0. 4] at topright cur pressed
 topButton = 4
+global currentClassFilter
+currentClassFilter = "All"
+
+global classNames
+classNames = [
+    "Paladin", "Mercenary", "Hunter", "Magician",
+    "Miner", "Woodcutter", "Angler", "Cook",
+    "Blacksmith", "Carpenter", "Tailor", "Alchemist",
+    "None", "All"
+]
 global currentPlaceIndex #current place we are looking at, i.e. Lives
 currentPlaceIndex = 47
 global titleLocation #location for where to put the title Fantasy Life -
@@ -287,7 +297,20 @@ def gatherData():
     
             
     dataIndexArray = [] #array stores previous indexes of current search
+    global currentClassFilter  # newly added
     for k in range(2, len(data)):
+
+        row_class = wb['Sheet1'].cell(row=k, column=livesCol).value
+
+        # Check if the "None" button was clicked (looking for empty cells)
+        if currentClassFilter == "None":
+            if row_class is not None:
+                continue  # Skip if it actually belongs to a class
+
+        # Check if a specific class was clicked
+        elif currentClassFilter != "All":
+            if row_class != currentClassFilter:
+                continue  # Skip if it doesn't match the selected Life
         ##DISPLAYING ALL DATA includes "obtained"
         if(topButton == 4): 
             if(currentPlaceIndex == allIndex): #if "All" is selected
@@ -366,10 +389,30 @@ def topB(v, *args):
     text_frame.destroy()
     text_frame = Frame(holdSelf)
     text_frame.pack_propagate(0)
-    text_frame.config(height=1000, width=1230)
+    text_frame.config(height=1000, width=1330)
     text_frame.pack()
     text_scroll = Scrollbar(text_frame, "Text")
     gatherData()
+
+
+def sortB(c, *args):
+    global currentClassFilter
+    global text_scroll
+    global text_frame
+    global holdSelf
+
+    currentClassFilter = classNames[c]
+
+    # Destroy and rebuild the text frame to apply the new filter
+    text_frame.destroy()
+    text_frame = Frame(holdSelf)
+    text_frame.pack_propagate(0)
+    text_frame.config(height=1000, width=1230)
+    text_frame.pack()
+    text_scroll = Scrollbar(text_frame, "Text")
+
+    gatherData()
+
     
 def selectLocation(n, *args):
     global currentPlaceIndex
@@ -529,9 +572,18 @@ class Window(Scrollbar):
         map_frame.pack(side = LEFT)
         
         map_scroll = Scrollbar(map_frame, "Map")
-        
+
+        class_button_frame = Frame(self)
+        class_button_frame.pack()
+
         button_frame = Frame(self)
         button_frame.pack()
+
+        global top_menu
+        top_menu = Frame(self)
+        top_menu.pack_propagate(0)
+        top_menu.config(height=35, width=1230)
+        top_menu.pack()
         
         global text_frame
         text_frame = Frame(self)
@@ -552,11 +604,17 @@ class Window(Scrollbar):
         button_manager[2] = Button(button_frame, text="Completed Requests", command=lambda v=2: topB(v))
         button_manager[3] = Button(button_frame, text="Turned In Requests", command=lambda v=3: topB(v))
         button_manager[4] = Button(button_frame, text="All Requests", command=lambda v=4: topB(v))
-        
+
         # placing buttons
         for i in range(5):
             button_manager[i].grid(row = 0, column = i)
-            
+
+
+        global classNames
+        class_buttons = [None] * len(classNames)
+        for i in range(len(classNames)):
+            class_buttons[i] = Button(class_button_frame, text=classNames[i], command=lambda c=i: sortB(c))
+            class_buttons[i].grid(row=1, column=i)
         
         
     def client_exit(self):
